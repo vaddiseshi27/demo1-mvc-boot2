@@ -8,9 +8,7 @@ public class MyBootApplication {
 
 	
 	public static void main(String[] args) {
-		system.out.println("upadeted1");
-		system.out.println("upadeted 2");
-
+		
 		
 		SpringApplication.run(MyBootApplication.class, args);
 
