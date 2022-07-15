@@ -1,31 +1,20 @@
-pipeline {
-agent any
-stages{
+node {
 stage("simple-check"){
-steps{
 git branch:'jlcmaster',
 url:
 'https://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@github.com/vaddiseshi27/demo1-mvc-boot2.git'
 echo"checkout copleted successfully..."
 }
-}
 stage("my-code-compile"){
-steps{
 sh 'mvn clean '
 echo "complation completed successfullly"
 }
-}
 stage("my-code-test"){
-steps{
 sh 'mvn test '
 echo "unit test completed successfullly"
 }
-}
 stage("my-code-packing"){
-steps{
 sh 'mvn package'
 echo " packing completed successfully..."
-}
-}
 }
 }
